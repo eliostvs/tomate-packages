@@ -24,7 +24,7 @@ Version: 0.2.0
 Release: 0
 License: GPL-3.0+
 Summary: Tomate statusicon plugin
-Source: %{name}-upstream.tar.gz
+Source: %{name}-%{version}.tar.gz
 Url: https://github.com/eliostvs/tomate-statusicon-plugin
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
@@ -52,7 +52,7 @@ BuildRequires: hicolor-icon-theme
 Tomate plugin that shows the session progress in the notification area.
 
 %prep
-%setup -q -n %{name}-upstream
+%setup -q -n %{name}-%{version}
 
 %build
 python setup.py build
