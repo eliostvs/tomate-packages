@@ -1,6 +1,6 @@
 # Maintainer: Elio Esteves Duarte update desktop database ubuntu after install crea<elio.esteves.duarte@gmail.com>
 pkgname=tomate-gtk
-pkgver=0.5.0
+pkgver=0.0.0
 pkgrel=1
 pkgdesc="A timer for the Pomodoro Technique"
 arch=('any')
@@ -15,7 +15,7 @@ depends=('desktop-file-utils'
 makedepends=('python-setuptools')
 options=(!emptydirs)
 source=("https://github.com/eliostvs/$pkgname/archive/$pkgver.tar.gz")
-md5sums=('911d0dc1f8a3319336e6470dda29e940')
+md5sums=('')
 install=tomate-gtk.install
 
 package() {

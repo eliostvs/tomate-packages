@@ -19,11 +19,11 @@
 %define module_name %{real_name}_indicator_plugin
 
 Name: %{real_name}-indicator-plugin
-Version: 0.5.0
+Version: 0.0.0
 Release: 0
 License: GPL-3.0+
 Summary: Tomate indicator plugin
-Source: %{name}-upstream.tar.gz
+Source: %{name}-%{version}.tar.gz
 Url: https://github.com/eliostvs/tomate-indicator-plugin
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
@@ -48,7 +48,7 @@ Requires: typelib-1_0-AppIndicator3-0_1
 Tomate plugin that shows the session progress in indicator.
 
 %prep
-%setup -q -n %{name}-upstream
+%setup -q -n %{name}-%{version}
 
 %build
 python setup.py build

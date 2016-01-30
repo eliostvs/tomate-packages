@@ -1,0 +1,20 @@
+<services>
+    <service name="tar_scm">
+        <param name="url">https://github.com/eliostvs/tomate.git</param>
+        <param name="versionformat">@PARENT_TAG@</param>
+        <param name="scm">git</param>
+        <param name="exclude">.git</param>
+        <param name="exclude">.gitignore</param>
+        <param name="revision">release/0.5.0</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/setup.py</param>
+    </service>
+    <service name="recompress">
+        <param name="file">*.tar</param>
+        <param name="compression">gz</param>
+    </service>
+    <service name="set_version">
+    </service>
+</services>

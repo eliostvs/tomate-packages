@@ -23,7 +23,7 @@ Version: 0.5.0
 Release: 0
 License: GPL-3.0+
 Summary: Tomate Pomodoro Timer (GTK+ Interface)
-Source: %{name}-upstream.tar.gz
+Source: %{name}-%{version}.tar.gz
 Url: https://github.com/eliostvs/tomate-gtk
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
@@ -52,7 +52,7 @@ Requires: dbus-1-x11
 Tomate Pomodoro Timer (GTK+ Interface).
 
 %prep
-%setup -q -n %{name}-upstream
+%setup -q -n %{name}-%{version}
 
 %build
 python setup.py build

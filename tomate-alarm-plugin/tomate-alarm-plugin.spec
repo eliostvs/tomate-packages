@@ -19,11 +19,11 @@
 %define module_name %{real_name}_alarm_plugin
 
 Name: %{real_name}-alarm-plugin
-Version: 0.5.0
+Version: 0.0.0
 Release: 0
 License: GPL-3.0+
 Summary: Tomate alarm plugin
-Source: %{name}-upstream.tar.gz
+Source: %{name}-%{version}.tar.gz
 Url: https://github.com/eliostvs/tomate-alarm-plugin
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
@@ -51,7 +51,7 @@ Requires: python-gstreamer1
 Tomate plugin that plays a alarm at session end.
 
 %prep
-%setup -q -n %{name}-upstream
+%setup -q -n %{name}-%{version}
 
 %build
 python setup.py build

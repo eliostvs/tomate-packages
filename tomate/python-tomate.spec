@@ -18,10 +18,10 @@
 %define real_name tomate
 
 Name: python-%{real_name}
-Version: 0.5.0
+Version: 0.0.0
 Release: 0
 License: GPL-3.0+
-Source: %{real_name}-upstream.tar.gz
+Source: %{real_name}-%{version}.tar.gz
 Url: https://github.com/eliostvs/tomate
 Summary: A pomodoro timer
 
@@ -56,7 +56,7 @@ Requires: python-Yapsy
 A pomodoro timer. Core classes.
 
 %prep
-%setup -q -n %{real_name}-upstream
+%setup -q -n %{real_name}-%{version}
 
 %build
 python setup.py build
