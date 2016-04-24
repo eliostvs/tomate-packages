@@ -15,6 +15,31 @@
         <param name="file">*.tar</param>
         <param name="compression">gz</param>
     </service>
+    <service name="download_url">
+      <param name="protocol">https</param>
+      <param name="host">raw.githubusercontent.com</param>
+      <param name="path">eliostvs/tomate-packages/master/tomate-alarm-plugin/debian.changelog</param>
+    </service>
+    <service name="download_url">
+      <param name="protocol">https</param>
+      <param name="host">raw.githubusercontent.com</param>
+      <param name="path">eliostvs/tomate-packages/master/tomate-alarm-plugin/debian.control</param>
+    </service>
+    <service name="download_url">
+      <param name="protocol">https</param>
+      <param name="host">raw.githubusercontent.com</param>
+      <param name="path">eliostvs/tomate-packages/master/tomate-alarm-plugin/debian.rules</param>
+    </service>
+    <service name="download_url">
+      <param name="protocol">https</param>
+      <param name="host">raw.githubusercontent.com</param>
+      <param name="path">eliostvs/tomate-packages/master/tomate-alarm-plugin/tomate-alarm-plugin.dsc</param>
+    </service>
+    <service name="download_url">
+      <param name="protocol">https</param>
+      <param name="host">raw.githubusercontent.com</param>
+      <param name="path">eliostvs/tomate-packages/master/tomate-alarm-plugin/tomate-alarm-plugin.spec</param>
+    </service>
     <service name="set_version">
     </service>
 </services>
