@@ -19,4 +19,5 @@ Depends: ${misc:Depends},
  gir1.2-gdkpixbuf-2.0,
  gir1.2-gtk-3.0,
  python3-tomate (>= 0.6.0)
+Suggests: tomate-indicator-plugin, tomate-statusicon-plugin, tomate-launcher-plugin, tomate-alarm-plugin, tomate-notify-plugin, tomate-exec-plugin
 Description: Gtk version from Tomate pomodoro timer.
