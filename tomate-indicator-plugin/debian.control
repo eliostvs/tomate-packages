@@ -1,7 +1,7 @@
 Source: tomate-indicator-plugin
 Section: python
 Priority: optional
-Build-Depends: debhelper (>= 10),
+Build-Depends: debhelper (>= 9),
  dh-python,
  python3-all,
  python3-setuptools

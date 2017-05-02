@@ -58,10 +58,10 @@ A pomodoro timer. Core classes.
 %setup -q -n %{real_name}-%{version}
 
 %build
-python setup.py build
+python3 setup.py build
 
 %install
-python setup.py install --prefix=%{_prefix} --root=%{buildroot}
+python3 setup.py install --prefix=%{_prefix} --root=%{buildroot}
 
 %files
 %defattr(-,root,root,-)

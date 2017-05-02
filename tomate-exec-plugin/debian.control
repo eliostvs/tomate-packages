@@ -1,7 +1,7 @@
 Source: tomate-exec-plugin
 Section: python
 Priority: optional
-Build-Depends: debhelper (>= 10),
+Build-Depends: debhelper (>= 9),
  dh-python,
  python3-all,
  python3-setuptools
@@ -15,4 +15,4 @@ Architecture: all
 Depends: ${misc:Depends},
  ${python3:Depends},
  tomate-gtk (>= 0.6.0)
-Description: 
+Description: Run commands when the timer starts, stops or finishes
