@@ -1,22 +1,17 @@
 # Maintainer: Elio Esteves Duarte <elio.esteves.duarte@gmail.com>
-pkgname=tomate-notify-plugin
+pkgname=tomate-exec-plugin
 pkgver=0.0.0
 pkgrel=1
-pkgdesc="Tomate plugin that shows screen notifications"
+pkgdesc="Run commands when the timer starts, stops or finishes"
 arch=('any')
-url="https://github.com/eliostvs/tomate-notify-plugin"
+url="https://github.com/eliostvs/tomate-exec-plugin"
 license=('GPL')
-depends=( 'gtk-update-icon-cache'
-         'gtk3'
-         'hicolor-icon-theme'
-         'libnotify'
-         'python'
+depends=('python'
          'tomate-gtk')
 makedepends=('python-setuptools')
 options=(!emptydirs)
 source=("https://github.com/eliostvs/$pkgname/archive/$pkgver.tar.gz")
 md5sums=('')
-install=tomate-notify-plugin.install
 
 package() {
   cd "$srcdir/$pkgname-$pkgver"

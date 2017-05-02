@@ -1,5 +1,5 @@
 #
-# spec file for package python-tomate
+# spec file for package tomate-gtk
 #
 # Copyright (c) 2014 Elio Esteves Duarte <elio.esteves.duarte@gmail.com>
 #
@@ -28,11 +28,11 @@ Url: https://github.com/eliostvs/tomate-gtk
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
-BuildRequires: python-devel
-BuildRequires: python-setuptools
+BuildRequires: python3-devel
+BuildRequires: python3-setuptools
 
-Requires: python-setuptools
-Requires: python-tomate >= 0.5.0
+Requires: python3-setuptools
+Requires: python3-tomate >= 0.6.0
 
 %if 0%{?fedora}
 Requires: dbus-x11

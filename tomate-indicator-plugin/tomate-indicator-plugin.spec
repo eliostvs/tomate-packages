@@ -1,5 +1,5 @@
 #
-# spec file for package python-tomate
+# spec file for package tomate-indicator-plugin
 #
 # Copyright (c) 2014 Elio Esteves Duarte <elio.esteves.duarte@gmail.com>
 #
@@ -28,10 +28,10 @@ Url: https://github.com/eliostvs/tomate-indicator-plugin
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
-BuildRequires: python-devel
-BuildRequires: python-setuptools
+BuildRequires: python3-devel
+BuildRequires: python3-setuptools
 
-Requires: tomate-gtk >= 0.5.0
+Requires: tomate-gtk >= 0.6.0
 
 %if 0%{?fedora}
 BuildArch: noarch

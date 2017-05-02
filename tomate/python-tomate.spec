@@ -17,7 +17,7 @@
 
 %define real_name tomate
 
-Name: python-%{real_name}
+Name: python3-%{real_name}
 Version: 0.0.0
 Release: 0
 License: GPL-3.0+
@@ -27,21 +27,20 @@ Summary: A pomodoro timer
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
-BuildRequires: python-devel
-BuildRequires: python-setuptools
+BuildRequires: python3-devel
+BuildRequires: python3-setuptools
 
-Requires: python-blinker
-Requires: python-enum34
-Requires: python-six
-Requires: python-wiring
-Requires: python-wrapt
+Requires: python3-blinker
+Requires: python3-six
+Requires: python3-wiring
+Requires: python3-wrapt
 
 %if 0%{?fedora}
 BuildArch: noarch
-Requires: dbus-python
-Requires: pygobject3
-Requires: python-yapsy
-Requires: pyxdg
+Requires: python3-dbus
+Requires: python3-gobject
+Requires: python3-yapsy
+Requires: python3-pyxdg
 %endif
 
 %if 0%{?suse_version}

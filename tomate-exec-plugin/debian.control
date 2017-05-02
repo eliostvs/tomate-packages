@@ -10,7 +10,7 @@ Standards-Version: 3.9.5
 X-Python-Version: >= 3.2
 Homepage: https://github.com/eliostvs/tomate-exec-plugin
 
-Package: tomate-notify-plugin
+Package: tomate-exec-plugin
 Architecture: all
 Depends: ${misc:Depends},
  ${python3:Depends},

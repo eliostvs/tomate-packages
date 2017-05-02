@@ -1,5 +1,5 @@
 #
-# spec file for package python-tomate
+# spec file for package tomate-statusicon-plugin
 #
 # Copyright (c) 2014 Elio Esteves Duarte <elio.esteves.duarte@gmail.com>
 #
@@ -29,8 +29,8 @@ Url: https://github.com/eliostvs/tomate-statusicon-plugin
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
-BuildRequires: python-devel
-BuildRequires: python-setuptools
+BuildRequires: python3-devel
+BuildRequires: python3-setuptools
 Conflicts: tomate-indicator-plugin
 
 %if 0%{?suse_version} > 1310
@@ -41,7 +41,7 @@ BuildRequires: adwaita-icon-theme
 BuildRequires: adwaita-icon-theme
 %endif
 
-Requires: tomate-gtk >= 0.4.0
+Requires: tomate-gtk >= 0.6.0
 
 %if 0%{?suse_version}
 BuildArchitectures: noarch

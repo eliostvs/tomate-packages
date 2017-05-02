@@ -1,5 +1,5 @@
 #
-# spec file for package python-tomate
+# spec file for package tomate-exec-plugin
 #
 # Copyright (c) 2014 Elio Esteves Duarte <elio.esteves.duarte@gmail.com>
 #
@@ -16,36 +16,33 @@
 #
 
 %define real_name tomate
-%define module_name %{real_name}_notify_plugin
+%define module_name %{real_name}_exec_plugin
 
-Name: %{real_name}-notify-plugin
+Name: %{real_name}-exec-plugin
 Version: 0.0.0
 Release: 0
 License: GPL-3.0+
-Summary: Tomate notify plugin
+Summary: Tomate exec commands plugin
 Source: %{name}-%{version}.tar.gz
-Url: https://github.com/eliostvs/tomate-notify-plugin
+Url: https://github.com/eliostvs/tomate-exec-plugin
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
-BuildRequires: python-devel
-BuildRequires: python-setuptools
+BuildRequires: python3-devel
+BuildRequires: python3-setuptools
 
-Requires: tomate-gtk >= 0.5.0
+Requires: tomate-gtk >= 0.6.0
 
 %if 0%{?suse_version}
 BuildArchitectures: noarch
-Requires: typelib-1_0-Notify-0_7
 %endif
 
 %if 0%{?fedora}
 BuildArch: noarch
-Requires: notify-python
-Requires: notification-daemon
 %endif
 
 %description
-Tomate plugin that shows screen notifications.
+Run commands when the timer starts, stops or finishes
 
 %prep
 %setup -q -n %{name}-%{version}

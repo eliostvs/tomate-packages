@@ -1,5 +1,5 @@
 #
-# spec file for package python-tomate
+# spec file for package tomate-alarm-plugin
 #
 # Copyright (c) 2014 Elio Esteves Duarte <elio.esteves.duarte@gmail.com>
 #
@@ -28,10 +28,10 @@ Url: https://github.com/eliostvs/tomate-alarm-plugin
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
-BuildRequires: python-devel
-BuildRequires: python-setuptools
+BuildRequires: python3-devel
+BuildRequires: python3-setuptools
 
-Requires: tomate-gtk >= 0.5.0
+Requires: tomate-gtk >= 0.6.0
 
 %if 0%{?suse_version}
 BuildArchitectures: noarch
@@ -44,7 +44,7 @@ Requires: typelib-1_0-Gst-1_0
 BuildArch: noarch
 Requires: gstreamer1-plugins-base
 Requires: gstreamer1-plugins-good
-Requires: python-gstreamer1
+Requires: python3-gstreamer1
 %endif
 
 %description
