@@ -31,22 +31,11 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
 BuildRequires: python3-devel
 BuildRequires: python3-setuptools
+BuildRequires: adwaita-icon-theme
+BuildRequires: hicolor-icon-theme
 Conflicts: tomate-indicator-plugin
 
-%if 0%{?suse_version} > 1310
-BuildRequires: adwaita-icon-theme
-%endif
-
-%if 0%{?fedora} > 20
-BuildRequires: adwaita-icon-theme
-%endif
-
 Requires: tomate-gtk >= 0.7.0
-
-%if 0%{?suse_version}
-BuildArchitectures: noarch
-BuildRequires: hicolor-icon-theme
-%endif
 
 %description
 Tomate plugin that shows the session progress in the notification area.
@@ -64,6 +53,7 @@ python3 setup.py install --prefix=%{_prefix} --root=%{buildroot}
 %if 0%{?suse_version}
 %icon_theme_cache_post
 %endif
+
 %if 0%{?fedora}
 /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null || :
 /bin/touch --no-create %{_datadir}/icons/Adwaita &>/dev/null || :
@@ -73,6 +63,7 @@ python3 setup.py install --prefix=%{_prefix} --root=%{buildroot}
 %if 0%{?suse_version}
 %icon_theme_cache_postun
 %endif
+
 %if 0%{?fedora}
 if [ $1 -eq 0 ] ; then
     /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null
