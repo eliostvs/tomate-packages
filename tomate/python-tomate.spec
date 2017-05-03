@@ -34,20 +34,18 @@ Requires: python3-blinker
 Requires: python3-six
 Requires: python3-wiring
 Requires: python3-wrapt
+Requires: python3-pyxdg
+Requires: python3-gobject
 
 %if 0%{?fedora}
 BuildArch: noarch
 Requires: python3-dbus
-Requires: python3-gobject
 Requires: python3-yapsy
-Requires: python3-pyxdg
 %endif
 
 %if 0%{?suse_version}
 BuildArchitectures: noarch
-Requires: dbus-1-python
-Requires: python-gobject
-Requires: python-xdg
+Requires: dbus-1-python3
 Requires: python-Yapsy
 %endif
 
