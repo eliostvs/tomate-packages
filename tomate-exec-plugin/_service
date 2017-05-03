@@ -19,32 +19,32 @@
     <service name="download_url">
       <param name="protocol">https</param>
       <param name="host">raw.githubusercontent.com</param>
-      <param name="path">eliostvs/tomate-packages/python3/tomate-exec-plugin/debian.changelog</param>
+      <param name="path">eliostvs/tomate-packages/master/tomate-exec-plugin/debian.changelog</param>
     </service>
     <service name="download_url">
       <param name="protocol">https</param>
       <param name="host">raw.githubusercontent.com</param>
-      <param name="path">eliostvs/tomate-packages/python3/tomate-exec-plugin/debian.control</param>
+      <param name="path">eliostvs/tomate-packages/master/tomate-exec-plugin/debian.control</param>
     </service>
     <service name="download_url">
       <param name="protocol">https</param>
       <param name="host">raw.githubusercontent.com</param>
-      <param name="path">eliostvs/tomate-packages/python3/tomate-exec-plugin/debian.rules</param>
+      <param name="path">eliostvs/tomate-packages/master/tomate-exec-plugin/debian.rules</param>
     </service>
     <service name="download_url">
       <param name="protocol">https</param>
       <param name="host">raw.githubusercontent.com</param>
-      <param name="path">eliostvs/tomate-packages/python3/tomate-exec-plugin/tomate-exec-plugin.dsc</param>
+      <param name="path">eliostvs/tomate-packages/master/tomate-exec-plugin/tomate-exec-plugin.dsc</param>
     </service>
     <service name="download_url">
       <param name="protocol">https</param>
       <param name="host">raw.githubusercontent.com</param>
-      <param name="path">eliostvs/tomate-packages/python3/tomate-exec-plugin/tomate-exec-plugin.spec</param>
+      <param name="path">eliostvs/tomate-packages/master/tomate-exec-plugin/tomate-exec-plugin.spec</param>
     </service>
     <service name="download_url">
       <param name="protocol">https</param>
       <param name="host">raw.githubusercontent.com</param>
-      <param name="path">eliostvs/tomate-packages/python3/tomate-exec-plugin/debian.compat</param>
+      <param name="path">eliostvs/tomate-packages/master/tomate-exec-plugin/debian.compat</param>
     </service>
     <service name="set_version">
     </service>
