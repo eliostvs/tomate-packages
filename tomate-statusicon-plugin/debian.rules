@@ -1,6 +1,4 @@
 #!/usr/bin/make -f
-export DH_COMPAT = 5
-
 override_dh_auto_test:
 
 %:

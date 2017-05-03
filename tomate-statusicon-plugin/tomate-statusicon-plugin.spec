@@ -41,7 +41,7 @@ BuildRequires: adwaita-icon-theme
 BuildRequires: adwaita-icon-theme
 %endif
 
-Requires: tomate-gtk >= 0.6.0
+Requires: tomate-gtk >= 0.7.0
 
 %if 0%{?suse_version}
 BuildArchitectures: noarch
@@ -92,7 +92,7 @@ fi
 %dir %{_datadir}/icons/Adwaita/22x22/
 %dir %{_datadir}/icons/Adwaita/22x22/status
 %endif
-%{python_sitelib}/%{module_name}-%{version}-*.egg-info/
+%{python_sitelib}/*
 
 %doc AUTHORS COPYING README.md
 
