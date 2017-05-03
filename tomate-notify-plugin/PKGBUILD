@@ -6,7 +6,7 @@ pkgdesc="Tomate plugin that shows screen notifications"
 arch=('any')
 url="https://github.com/eliostvs/tomate-notify-plugin"
 license=('GPL')
-depends=( 'gtk-update-icon-cache'
+depends=('gtk-update-icon-cache'
          'gtk3'
          'hicolor-icon-theme'
          'libnotify'

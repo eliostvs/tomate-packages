@@ -16,5 +16,5 @@ Depends: ${misc:Depends},
  ${python3:Depends},
  gir1.2-notify-0.7,
  notify-osd,
- tomate-gtk (>= 0.6.0)
+ tomate-gtk (>= 0.7.0)
 Description: Tomate plugin that shows screen notifications
