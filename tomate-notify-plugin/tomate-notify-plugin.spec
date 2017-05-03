@@ -60,7 +60,7 @@ python3 setup.py install --prefix=%{_prefix} --root=%{buildroot}
 %defattr(-,root,root,-)
 %dir %{_datadir}/%{real_name}/
 %{_datadir}/%{real_name}/plugins/
-%{python_sitelib}/%{module_name}-%{version}-*.egg-info/
+%{python_sitelib}/*
 
 %doc AUTHORS COPYING README.md
 
