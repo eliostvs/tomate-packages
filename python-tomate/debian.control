@@ -10,7 +10,7 @@ Standards-Version: 3.9.5
 X-Python3-Version: >= 3.2
 Homepage: https://github.com/eliostvs/tomate
 
-Package: python3-tomate
+Package: python-tomate
 Architecture: all
 Depends: ${misc:Depends},
  ${python3:Depends},
