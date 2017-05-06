@@ -1,4 +1,4 @@
-Source: python3-tomate
+Source: python-tomate
 Section: python
 Priority: optional
 Build-Depends: debhelper (>= 9),
@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 9),
  python3-setuptools
 Maintainer: Elio Esteves Duarte <elio.esteves.duarte@gmail.com>
 Standards-Version: 3.9.5
-X-Python-Version: >= 3.2
+X-Python3-Version: >= 3.2
 Homepage: https://github.com/eliostvs/tomate
 
 Package: python3-tomate

@@ -1,6 +1,6 @@
 Format: 1.0
-Source: python3-tomate
-Binary: python3-tomate
+Source: python-tomate
+Binary: python-tomate
 Architecture: all
 Version: 0.0.0
 Maintainer: Elio Esteves Duarte <elio.esteves.duarte@gmail.com>
