@@ -57,7 +57,6 @@ A pomodoro timer. Core classes.
 
 %build
 %py3_build
-%{__python} setup.py build
 
 %install
 %py3_install
