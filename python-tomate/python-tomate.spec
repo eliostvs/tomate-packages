@@ -17,7 +17,7 @@
 
 %define real_name tomate
 
-Name: python3-%{real_name}
+Name: python-%{real_name}
 Version: 0.0.0
 Release: 0
 License: GPL-3.0+
@@ -53,18 +53,19 @@ Requires: python-Yapsy
 A pomodoro timer. Core classes.
 
 %prep
-%setup -q -n %{real_name}-%{version}
+%autosetup -n %{real_name}-%{version}
 
 %build
-python3 setup.py build
+%py3_build
+%{__python} setup.py build
 
 %install
-python3 setup.py install --prefix=%{_prefix} --root=%{buildroot}
+%py3_install
 
 %files
 %defattr(-,root,root,-)
-%{python_sitelib}/*
-
+%{python3_sitelib}/*.egg-info
+%{python3_sitelib}/%{real_name}
 %doc AUTHORS COPYING README.md
 
 %changelog
