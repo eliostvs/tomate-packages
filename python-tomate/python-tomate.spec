@@ -46,7 +46,7 @@ Requires: python3-yapsy
 %if 0%{?suse_version}
 BuildArchitectures: noarch
 Requires: dbus-1-python3
-Requires: python-Yapsy
+Requires: python3-yapsy
 %endif
 
 %description
