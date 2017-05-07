@@ -15,10 +15,10 @@
 # Please submit bugfixes or comments via http://bugs.opensuse.org/
 #
 
-%define real_name tomate
-%define module_name %{real_name}_gtk
+%define modname tomate
+%define module_name %{modname}_gtk
 
-Name: %{real_name}-gtk
+Name: %{modname}-gtk
 Version: 0.5.0
 Release: 0
 License: GPL-3.0+
@@ -86,7 +86,7 @@ fi
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/*/*.*
 %{python3_sitelib}/*.egg-info
-%{python3_sitelib}/%{real_name}
+%{python3_sitelib}/%{module_name}
 
 %doc AUTHORS COPYING README.md
 
