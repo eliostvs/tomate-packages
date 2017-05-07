@@ -31,7 +31,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-build
 BuildRequires: python3-devel
 BuildRequires: python3-setuptools
 
-Requires: python3-tomate >= 0.7.0
+Requires: python-tomate >= 0.7.0
 
 %if 0%{?fedora}
 Requires: dbus-x11
