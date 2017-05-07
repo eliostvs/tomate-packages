@@ -62,7 +62,6 @@ Tomate plugin that plays a alarm at session end.
 %files
 %defattr(-,root,root,-)
 %{python3_sitelib}/*.egg-info
-%{python3_sitelib}/%{module_name}
 %dir %{_datadir}/%{modname}/
 %{_datadir}/%{modname}/plugins/
 %{_datadir}/%{modname}/media/
