@@ -75,7 +75,6 @@ fi
 %files
 %defattr(-,root,root,-)
 %{python3_sitelib}/*.egg-info
-%{python3_sitelib}/%{module_name}
 %dir %{_datadir}/%{real_name}/
 %{_datadir}/%{real_name}/plugins/
 %{_datadir}/icons/hicolor/*/*/*.*

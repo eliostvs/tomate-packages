@@ -58,10 +58,9 @@ Tomate plugin that shows screen notifications.
 
 %files
 %defattr(-,root,root,-)
+%{python3_sitelib}/*.egg-info
 %dir %{_datadir}/%{real_name}/
 %{_datadir}/%{real_name}/plugins/
-%{python3_sitelib}/*.egg-info
-%{python3_sitelib}/%{module_name}
 %doc AUTHORS COPYING README.md
 
 %changelog
