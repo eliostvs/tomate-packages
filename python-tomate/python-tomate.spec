@@ -36,17 +36,17 @@ Requires: python3-wiring
 Requires: python3-wrapt
 Requires: python3-pyxdg
 Requires: python3-gobject
+Requires: python3-venusian
+Requires: python3-yapsy
 
 %if 0%{?fedora}
 BuildArch: noarch
 Requires: python3-dbus
-Requires: python3-yapsy
 %endif
 
 %if 0%{?suse_version}
 BuildArchitectures: noarch
 Requires: dbus-1-python3
-Requires: python3-yapsy
 %endif
 
 %description
