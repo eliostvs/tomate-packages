@@ -45,7 +45,7 @@ BuildArch: noarch
 Run commands when the timer starts, stops or finishes
 
 %prep
-%autosetup -n %{real_name}-%{version}
+%autosetup -n %{name}-%{version}
 
 %build
 %py3_build
