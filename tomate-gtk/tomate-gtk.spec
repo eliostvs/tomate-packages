@@ -85,7 +85,8 @@ fi
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/*/*.*
-%{python_sitelib}/*
+%{python3_sitelib}/*.egg-info
+%{python3_sitelib}/%{real_name}
 
 %doc AUTHORS COPYING README.md
 
