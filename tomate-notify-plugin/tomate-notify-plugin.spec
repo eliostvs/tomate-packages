@@ -48,7 +48,7 @@ Requires: notification-daemon
 Tomate plugin that shows screen notifications.
 
 %prep
-%autosetup -n %{real_name}-%{version}
+%autosetup -n %{name}-%{version}
 
 %build
 %py3_build

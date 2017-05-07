@@ -41,7 +41,7 @@ Requires: tomate-gtk >= 0.7.0
 Tomate plugin that shows the session progress in the notification area.
 
 %prep
-%autosetup -n %{real_name}-%{version}
+%autosetup -n %{name}-%{version}
 
 %build
 %py3_build
