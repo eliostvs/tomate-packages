@@ -48,20 +48,20 @@ Requires: notification-daemon
 Tomate plugin that shows screen notifications.
 
 %prep
-%setup -q -n %{name}-%{version}
+%autosetup -n %{real_name}-%{version}
 
 %build
-python3 setup.py build
+%py3_build
 
 %install
-python3 setup.py install --prefix=%{_prefix} --root=%{buildroot}
+%py3_install
 
 %files
 %defattr(-,root,root,-)
 %dir %{_datadir}/%{real_name}/
 %{_datadir}/%{real_name}/plugins/
-%{python_sitelib}/*
-
+%{python3_sitelib}/*.egg-info
+%{python3_sitelib}/%{module_name}
 %doc AUTHORS COPYING README.md
 
 %changelog

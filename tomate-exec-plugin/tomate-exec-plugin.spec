@@ -45,20 +45,20 @@ BuildArch: noarch
 Run commands when the timer starts, stops or finishes
 
 %prep
-%setup -q -n %{name}-%{version}
+%autosetup -n %{real_name}-%{version}
 
 %build
-python3 setup.py build
+%py3_build
 
 %install
-python3 setup.py install --prefix=%{_prefix} --root=%{buildroot}
+%py3_install
 
 %files
 %defattr(-,root,root,-)
+%{python3_sitelib}/*.egg-info
+%{python3_sitelib}/%{module_name}
 %dir %{_datadir}/%{real_name}/
 %{_datadir}/%{real_name}/plugins/
-%{python_sitelib}/*
-
 %doc AUTHORS COPYING README.md
 
 %changelog

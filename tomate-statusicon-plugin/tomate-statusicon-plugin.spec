@@ -41,13 +41,13 @@ Requires: tomate-gtk >= 0.7.0
 Tomate plugin that shows the session progress in the notification area.
 
 %prep
-%setup -q -n %{name}-%{version}
+%autosetup -n %{real_name}-%{version}
 
 %build
-python3 setup.py build
+%py3_build
 
 %install
-python3 setup.py install --prefix=%{_prefix} --root=%{buildroot}
+%py3_install
 
 %post
 %if 0%{?suse_version}
@@ -74,6 +74,8 @@ fi
 
 %files
 %defattr(-,root,root,-)
+%{python3_sitelib}/*.egg-info
+%{python3_sitelib}/%{module_name}
 %dir %{_datadir}/%{real_name}/
 %{_datadir}/%{real_name}/plugins/
 %{_datadir}/icons/hicolor/*/*/*.*
@@ -83,8 +85,6 @@ fi
 %dir %{_datadir}/icons/Adwaita/22x22/
 %dir %{_datadir}/icons/Adwaita/22x22/status
 %endif
-%{python_sitelib}/*
-
 %doc AUTHORS COPYING README.md
 
 %changelog

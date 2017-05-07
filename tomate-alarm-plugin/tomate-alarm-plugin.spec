@@ -15,10 +15,10 @@
 # Please submit bugfixes or comments via http://bugs.opensuse.org/
 #
 
-%define real_name tomate
-%define module_name %{real_name}_alarm_plugin
+%define modname tomate
+%define module_name %{modname}_alarm_plugin
 
-Name: %{real_name}-alarm-plugin
+Name: %{modname}-alarm-plugin
 Version: 0.0.0
 Release: 0
 License: GPL-3.0+
@@ -51,21 +51,21 @@ Requires: python3-gstreamer1
 Tomate plugin that plays a alarm at session end.
 
 %prep
-%setup -q -n %{name}-%{version}
+%autosetup -n %{name}-%{version}
 
 %build
-python3 setup.py build
+%py3_build
 
 %install
-python3 setup.py install --prefix=%{_prefix} --root=%{buildroot}
+%py3_install
 
 %files
 %defattr(-,root,root,-)
-%dir %{_datadir}/%{real_name}/
-%{_datadir}/%{real_name}/plugins/
-%{_datadir}/%{real_name}/media/
-%{python_sitelib}/*
-
+%{python3_sitelib}/*.egg-info
+%{python3_sitelib}/%{module_name}
+%dir %{_datadir}/%{modname}/
+%{_datadir}/%{modname}/plugins/
+%{_datadir}/%{modname}/media/
 %doc AUTHORS COPYING README.md
 
 %changelog
