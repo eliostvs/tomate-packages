@@ -41,6 +41,16 @@
       <param name="host">raw.githubusercontent.com</param>
       <param name="path">eliostvs/tomate-packages/master/tomate-indicator-plugin/debian.compat</param>
     </service>
+    <service name="download_url">
+      <param name="protocol">https</param>
+      <param name="host">raw.githubusercontent.com</param>
+      <param name="path">eliostvs/tomate-packages/master/tomate-indicator-plugin/debian.tomate-indicator-plugin.postinst</param>
+    </service>
+    <service name="download_url">
+      <param name="protocol">https</param>
+      <param name="host">raw.githubusercontent.com</param>
+      <param name="path">eliostvs/tomate-packages/master/tomate-indicator-plugin/debian.tomate-indicator-plugin.postrm</param>
+    </service>
     <service name="set_version">
     </service>
 </services>
