@@ -8,16 +8,15 @@ arch=('any')
 url="https://github.com/eliostvs/tomate/"
 license=('GPL')
 depends=('glib2'
-        'python-blinker'
-        'python-dbus'
-        'python-gobject'
-        'python-six'
-        'python-wiring'
-        'python-wrapt'
-        'python-xdg'
-        'python-yapsy'
-        'python-venusian'
-        'python')
+         'python'
+         'python-blinker'
+         'python-dbus'
+         'python-gobject'
+         'python-venusian'
+         'python-wiring'
+         'python-wrapt'
+         'python-xdg'
+         'python-yapsy')
 makedepends=('python-setuptools')
 options=(!emptydirs)
 source=("https://github.com/eliostvs/$_pkgname/archive/$pkgver.tar.gz")
