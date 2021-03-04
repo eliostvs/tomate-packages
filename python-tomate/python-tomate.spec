@@ -11,8 +11,6 @@
 # case the license is the MIT License). An "Open Source License" is a
 # license that conforms to the Open Source Definition (Version 1.9)
 # published by the Open Source Initiative.
-
-# Please submit bugfixes or comments via http://bugs.opensuse.org/
 #
 
 %define real_name tomate
@@ -21,50 +19,38 @@ Name: python-%{real_name}
 Version: 0.0.0
 Release: 0
 License: GPL-3.0+
-Source: %{real_name}-%{version}.tar.gz
+Source0: README.md
 Url: https://github.com/eliostvs/tomate
 Summary: A pomodoro timer
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
-BuildRequires: python3-devel
-BuildRequires: python3-setuptools
-
-Requires: python3-blinker
-Requires: python3-six
-Requires: python3-wiring
-Requires: python3-wrapt
-Requires: python3-pyxdg
-Requires: python3-gobject
-Requires: python3-venusian
-Requires: python3-yapsy
-
 %if 0%{?fedora}
 BuildArch: noarch
-Requires: python3-dbus
 %endif
 
 %if 0%{?suse_version}
 BuildArchitectures: noarch
-Requires: dbus-1-python3
 %endif
 
 %description
-A pomodoro timer. Core classes.
+This package has been joined to tomate-gtk.
+
+To prevent upgrade problems in the tomate-gtk, this package will be still a dependency of it but will be empty.
 
 %prep
-%autosetup -n %{real_name}-%{version}
+cp %{SOURCE0} .
 
 %build
-%py3_build
+#nothing to do
 
 %install
-%py3_install
+# nothing to do
 
 %files
 %defattr(-,root,root,-)
-%{python3_sitelib}/*.egg-info
-%{python3_sitelib}/%{real_name}
-%doc AUTHORS COPYING README.md
+%doc README.md
 
 %changelog
+* Wed Feb 10 2021 elio.esteves.duarte@gmail.com
+- Dummy package

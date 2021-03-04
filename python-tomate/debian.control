@@ -1,10 +1,7 @@
 Source: python-tomate
 Section: python
 Priority: optional
-Build-Depends: debhelper (>= 9),
- dh-python,
- python3-all,
- python3-setuptools
+Build-Depends: debhelper
 Maintainer: Elio Esteves Duarte <elio.esteves.duarte@gmail.com>
 Standards-Version: 3.9.5
 X-Python3-Version: >= 3.2
@@ -12,17 +9,5 @@ Homepage: https://github.com/eliostvs/tomate
 
 Package: python-tomate
 Architecture: all
-Depends: ${misc:Depends},
- ${python3:Depends},
- gir1.2-glib-2.0,
- python3-blinker,
- python3-dbus,
- python3-gi,
- python3-six,
- python3-venusian,
- python3-wiring,
- python3-wrapt,
- python3-xdg,
- python3-yapsy
-Suggests: tomate-gtk, tomate-indicator-plugin, tomate-statusicon-plugin, tomate-launcher-plugin, tomate-alarm-plugin, tomate-notify-plugin, tomate-exec-plugin
-Description: A pomodoro timer. Core classes.
+Description: This package has been joined to tomate-gtk.
+ To prevent upgrade problems in the tomate-gtk, this package will be still a dependency of it but will be empty.
