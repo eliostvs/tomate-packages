@@ -19,7 +19,7 @@ Name: python-%{real_name}
 Version: 0.0.0
 Release: 0
 License: GPL-3.0+
-Source0: README.md
+Source: %{real_name}-%{version}.tar.gz
 Url: https://github.com/eliostvs/tomate
 Summary: A pomodoro timer
 
@@ -39,7 +39,7 @@ This package has been joined to tomate-gtk.
 To prevent upgrade problems in the tomate-gtk, this package will be still a dependency of it but will be empty.
 
 %prep
-cp %{SOURCE0} .
+%autosetup -n %{real_name}-%{version}
 
 %build
 #nothing to do
