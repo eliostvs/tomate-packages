@@ -22,7 +22,7 @@ Name: %{modname}-gtk
 Version: 0.5.0
 Release: 0
 License: GPL-3.0+
-Summary: Tomate Pomodoro Timer (GTK+ Interface)
+Summary: Pomodoro timer
 Source: %{name}-%{version}.tar.gz
 Url: https://github.com/eliostvs/tomate-gtk
 
