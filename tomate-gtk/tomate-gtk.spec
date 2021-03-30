@@ -48,7 +48,7 @@ Requires: dbus-1-x11
 %endif
 
 %description
-Tomate Pomodoro Timer (GTK+ Interface).
+A Pomodoro timer written in Gtk3 and Python for Linux desktops.
 
 %prep
 %setup -q -n %{name}-%{version}
