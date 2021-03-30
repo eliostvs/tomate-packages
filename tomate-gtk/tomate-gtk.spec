@@ -88,6 +88,6 @@ fi
 %{python3_sitelib}/*.egg-info
 %{python3_sitelib}/%{module_name}
 
-%doc AUTHORS COPYING README.md
+%doc AUTHORS COPYING README.md CHANGELOG.md
 
 %changelog
