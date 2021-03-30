@@ -21,7 +21,7 @@ Release: 0
 License: GPL-3.0+
 Source: %{real_name}-%{version}.tar.gz
 Url: https://github.com/eliostvs/tomate
-Summary: A pomodoro timer
+Summary: This package has been joined to tomate-gtk.
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
