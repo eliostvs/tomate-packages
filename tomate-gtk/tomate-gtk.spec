@@ -16,7 +16,6 @@
 #
 
 %define modname tomate
-%define module_name %{modname}_gtk
 
 Name: %{modname}-gtk
 Version: 0.5.0
@@ -86,7 +85,7 @@ fi
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/*/*.*
 %{python3_sitelib}/*.egg-info
-%{python3_sitelib}/%{module_name}
+%{python3_sitelib}/%{modname}
 
 %doc AUTHORS COPYING README.md CHANGELOG.md
 
