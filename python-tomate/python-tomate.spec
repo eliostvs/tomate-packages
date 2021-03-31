@@ -13,13 +13,13 @@
 # published by the Open Source Initiative.
 #
 
-%define real_name tomate
+%define modname tomate
 
-Name: python-%{real_name}
+Name: python-%{modname}
 Version: 0.0.0
 Release: 0
 License: GPL-3.0+
-Source: %{real_name}-%{version}.tar.gz
+Source: %{modname}-%{version}.tar.gz
 Url: https://github.com/eliostvs/tomate
 Summary: This package has been joined to tomate-gtk.
 
@@ -39,7 +39,7 @@ This package has been joined to tomate-gtk.
 To prevent upgrade problems in the tomate-gtk, this package will be still a dependency of it but will be empty.
 
 %prep
-%autosetup -n %{real_name}-%{version}
+%autosetup -n %{modname}-%{version}
 
 %build
 #nothing to do
