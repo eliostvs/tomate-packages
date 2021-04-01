@@ -65,6 +65,6 @@ Tomate plugin that plays a alarm at session end.
 %dir %{_datadir}/%{modname}/
 %{_datadir}/%{modname}/plugins/
 %{_datadir}/%{modname}/media/
-%doc AUTHORS COPYING README.md
+%doc AUTHORS COPYING README.md CHANGELOG.md
 
 %changelog
