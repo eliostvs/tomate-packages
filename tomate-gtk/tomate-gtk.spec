@@ -31,8 +31,8 @@ BuildRequires: python3-devel
 BuildRequires: python3-setuptools
 
 %if 0%{?fedora}
-Requires: dbus-x11
 BuildArch: noarch
+Requires: dbus-x11
 Requires: gtk3
 %endif
 
