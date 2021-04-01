@@ -21,7 +21,7 @@ Name: %{modname}-gtk
 Version: 0.5.0
 Release: 0
 License: GPL-3.0+
-Summary: Pomodoro timer
+Summary: A Pomodoro timer
 Source: %{name}-%{version}.tar.gz
 Url: https://github.com/eliostvs/tomate-gtk
 
@@ -29,8 +29,6 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
 BuildRequires: python3-devel
 BuildRequires: python3-setuptools
-
-Requires: python-tomate >= 0.12.0
 
 %if 0%{?fedora}
 Requires: dbus-x11
