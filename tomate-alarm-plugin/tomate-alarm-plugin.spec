@@ -16,7 +16,6 @@
 #
 
 %define modname tomate
-%define module_name %{modname}_alarm_plugin
 
 Name: %{modname}-alarm-plugin
 Version: 0.0.0
