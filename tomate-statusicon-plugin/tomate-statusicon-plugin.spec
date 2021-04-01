@@ -14,10 +14,9 @@
 
 # Please submit bugfixes or comments via http://bugs.opensuse.org/
 #
-%define real_name tomate
-%define module_name %{real_name}_statusicon_plugin
+%define modname tomate
 
-Name: %{real_name}-statusicon-plugin
+Name: %{modname}-statusicon-plugin
 Version: 0.2.0
 Release: 0
 License: GPL-3.0+
@@ -73,8 +72,8 @@ fi
 %files
 %defattr(-,root,root,-)
 %{python3_sitelib}/*.egg-info
-%dir %{_datadir}/%{real_name}/
-%{_datadir}/%{real_name}/plugins/
+%dir %{_datadir}/%{modname}/
+%{_datadir}/%{modname}/plugins/
 %{_datadir}/icons/hicolor/*/*/*.*
 %{_datadir}/icons/Adwaita/*/*/*.*
 %if 0%{?suse_version} == 1310
