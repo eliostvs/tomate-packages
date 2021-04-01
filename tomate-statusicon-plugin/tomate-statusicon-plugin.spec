@@ -26,13 +26,20 @@ Url: https://github.com/eliostvs/tomate-statusicon-plugin
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
+%if 0%{?fedora}
+BuildArch: noarch
+%endif
+
+%if 0%{?suse_version}
+BuildArchitectures: noarch
+%endif
+
 BuildRequires: python3-devel
 BuildRequires: python3-setuptools
 BuildRequires: adwaita-icon-theme
 BuildRequires: hicolor-icon-theme
-Conflicts: tomate-indicator-plugin
 
-Requires: tomate-gtk >= 0.7.0
+Conflicts: tomate-indicator-plugin
 
 %description
 Tomate plugin that shows the session progress in the notification area.
