@@ -29,9 +29,6 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
 BuildRequires: python3-devel
 BuildRequires: python3-setuptools
-BuildRequires: hicolor-icon-theme
-
-Requires: hicolor-icon-theme
 
 %if 0%{?fedora}
 BuildArch: noarch
@@ -40,6 +37,7 @@ Requires: libappindicator-gtk3
 
 %if 0%{?suse_version}
 BuildArchitectures: noarch
+BuildRequires: hicolor-icon-theme
 Requires: typelib-1_0-AppIndicator3-0_1
 %endif
 
