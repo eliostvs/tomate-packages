@@ -16,13 +16,12 @@
 #
 
 %define modname tomate
-%define module_name %{modname}_gtk
 
 Name: %{modname}-gtk
 Version: 0.5.0
 Release: 0
 License: GPL-3.0+
-Summary: Tomate Pomodoro Timer (GTK+ Interface)
+Summary: A Pomodoro timer
 Source: %{name}-%{version}.tar.gz
 Url: https://github.com/eliostvs/tomate-gtk
 
@@ -30,8 +29,6 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
 BuildRequires: python3-devel
 BuildRequires: python3-setuptools
-
-Requires: python-tomate >= 0.7.0
 
 %if 0%{?fedora}
 Requires: dbus-x11
@@ -48,7 +45,7 @@ Requires: dbus-1-x11
 %endif
 
 %description
-Tomate Pomodoro Timer (GTK+ Interface).
+A Pomodoro timer written in Gtk3 and Python for Linux desktops.
 
 %prep
 %setup -q -n %{name}-%{version}
@@ -86,8 +83,8 @@ fi
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/*/*.*
 %{python3_sitelib}/*.egg-info
-%{python3_sitelib}/%{module_name}
+%{python3_sitelib}/%{modname}
 
-%doc AUTHORS COPYING README.md
+%doc AUTHORS COPYING README.md CHANGELOG.md
 
 %changelog

@@ -15,14 +15,13 @@
 # Please submit bugfixes or comments via http://bugs.opensuse.org/
 #
 
-%define real_name tomate
-%define module_name %{real_name}_exec_plugin
+%define modname tomate
 
-Name: %{real_name}-exec-plugin
+Name: %{modname}-exec-plugin
 Version: 0.0.0
 Release: 0
 License: GPL-3.0+
-Summary: Tomate exec commands plugin
+Summary: Tomate exec plugin
 Source: %{name}-%{version}.tar.gz
 Url: https://github.com/eliostvs/tomate-exec-plugin
 
@@ -30,8 +29,6 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
 BuildRequires: python3-devel
 BuildRequires: python3-setuptools
-
-Requires: tomate-gtk >= 0.7.0
 
 %if 0%{?suse_version}
 BuildArchitectures: noarch
@@ -42,7 +39,7 @@ BuildArch: noarch
 %endif
 
 %description
-Run commands when the timer starts, stops or finishes
+Tomate plugin that run commands when the timer starts, stops or finishes.
 
 %prep
 %autosetup -n %{name}-%{version}
@@ -56,8 +53,8 @@ Run commands when the timer starts, stops or finishes
 %files
 %defattr(-,root,root,-)
 %{python3_sitelib}/*.egg-info
-%dir %{_datadir}/%{real_name}/
-%{_datadir}/%{real_name}/plugins/
+%dir %{_datadir}/%{modname}/
+%{_datadir}/%{modname}/plugins/
 %doc AUTHORS COPYING README.md
 
 %changelog

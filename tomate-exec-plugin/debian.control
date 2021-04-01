@@ -15,4 +15,4 @@ Architecture: all
 Depends: ${misc:Depends},
  ${python3:Depends},
  tomate-gtk (>= 0.7.0)
-Description: Run commands when the timer starts, stops or finishes
+Description: Tomate plugin that run commands when the timer starts, stops or finishes.

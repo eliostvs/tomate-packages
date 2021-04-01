@@ -14,8 +14,6 @@
 
 # Please submit bugfixes or comments via http://bugs.opensuse.org/
 #
-%global debug_package %{nil}
-
 %define real_name tomate
 %define module_name %{real_name}_statusicon_plugin
 

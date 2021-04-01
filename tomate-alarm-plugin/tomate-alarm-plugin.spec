@@ -16,7 +16,6 @@
 #
 
 %define modname tomate
-%define module_name %{modname}_alarm_plugin
 
 Name: %{modname}-alarm-plugin
 Version: 0.0.0
@@ -30,8 +29,6 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
 BuildRequires: python3-devel
 BuildRequires: python3-setuptools
-
-Requires: tomate-gtk >= 0.7.0
 
 %if 0%{?suse_version}
 BuildArchitectures: noarch
@@ -65,6 +62,6 @@ Tomate plugin that plays a alarm at session end.
 %dir %{_datadir}/%{modname}/
 %{_datadir}/%{modname}/plugins/
 %{_datadir}/%{modname}/media/
-%doc AUTHORS COPYING README.md
+%doc AUTHORS COPYING README.md CHANGELOG.md
 
 %changelog

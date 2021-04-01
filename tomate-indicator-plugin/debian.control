@@ -4,7 +4,8 @@ Priority: optional
 Build-Depends: debhelper (>= 9),
  dh-python,
  python3-all,
- python3-setuptools
+ python3-setuptools,
+ gtk-update-icon-cache
 Maintainer: Elio Esteves Duarte <elio.esteves.duarte@gmail.com>
 Standards-Version: 3.9.5
 X-Python3-Version: >= 3.2
@@ -16,4 +17,4 @@ Depends: ${misc:Depends},
  ${python3:Depends},
  gir1.2-appindicator3-0.1,
  tomate-gtk (>= 0.7.0)
-Description: Tomate plugin that shows the session progress in indicator
+Description: Tomate plugin that shows the session progress in the indicator.
