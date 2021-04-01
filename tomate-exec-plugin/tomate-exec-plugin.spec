@@ -21,7 +21,7 @@ Name: %{modname}-exec-plugin
 Version: 0.0.0
 Release: 0
 License: GPL-3.0+
-Summary: Tomate exec commands plugin
+Summary: Tomate exec plugin
 Source: %{name}-%{version}.tar.gz
 Url: https://github.com/eliostvs/tomate-exec-plugin
 
