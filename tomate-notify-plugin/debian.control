@@ -17,4 +17,4 @@ Depends: ${misc:Depends},
  gir1.2-notify-0.7,
  notify-osd,
  tomate-gtk (>= 0.7.0)
-Description: Tomate plugin that shows screen notifications
+Description: Tomate plugin that shows screen notifications.
