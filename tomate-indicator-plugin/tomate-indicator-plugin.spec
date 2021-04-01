@@ -33,7 +33,6 @@ BuildRequires: python3-setuptools
 BuildRequires: hicolor-icon-theme
 
 Requires: hicolor-icon-theme
-Requires: tomate-gtk >= 0.7.0
 
 %if 0%{?fedora}
 BuildArch: noarch
