@@ -55,6 +55,6 @@ Tomate plugin that run commands when the timer starts, stops or finishes.
 %{python3_sitelib}/*.egg-info
 %dir %{_datadir}/%{modname}/
 %{_datadir}/%{modname}/plugins/
-%doc AUTHORS COPYING README.md
+%doc AUTHORS COPYING README.md CHANGELOG.md
 
 %changelog
