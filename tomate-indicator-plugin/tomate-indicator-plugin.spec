@@ -43,6 +43,8 @@ BuildArchitectures: noarch
 Requires: typelib-1_0-AppIndicator3-0_1
 %endif
 
+Conflicts: tomate-statusicon-plugin
+
 %description
 Tomate plugin that shows the session progress in indicator.
 
