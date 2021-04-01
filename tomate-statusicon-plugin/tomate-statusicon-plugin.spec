@@ -81,6 +81,6 @@ fi
 %dir %{_datadir}/icons/Adwaita/22x22/
 %dir %{_datadir}/icons/Adwaita/22x22/status
 %endif
-%doc AUTHORS COPYING README.md
+%doc AUTHORS COPYING README.md CHANGELOG.md
 
 %changelog
