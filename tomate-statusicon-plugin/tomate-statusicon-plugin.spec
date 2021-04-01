@@ -26,18 +26,18 @@ Url: https://github.com/eliostvs/tomate-statusicon-plugin
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
+BuildRequires: python3-devel
+BuildRequires: python3-setuptools
+
 %if 0%{?fedora}
 BuildArch: noarch
 %endif
 
 %if 0%{?suse_version}
 BuildArchitectures: noarch
-%endif
-
-BuildRequires: python3-devel
-BuildRequires: python3-setuptools
 BuildRequires: adwaita-icon-theme
 BuildRequires: hicolor-icon-theme
+%endif
 
 Conflicts: tomate-indicator-plugin
 
