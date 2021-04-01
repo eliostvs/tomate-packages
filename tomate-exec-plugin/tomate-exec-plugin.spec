@@ -39,7 +39,7 @@ BuildArch: noarch
 %endif
 
 %description
-Run commands when the timer starts, stops or finishes
+Tomate plugin that run commands when the timer starts, stops or finishes.
 
 %prep
 %autosetup -n %{name}-%{version}
