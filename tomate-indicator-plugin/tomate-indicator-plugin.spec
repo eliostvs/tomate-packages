@@ -82,6 +82,6 @@ fi
 %{_datadir}/icons/hicolor/*/*/*.*
 %{_datadir}/icons/ubuntu-mono-light/
 %{_datadir}/icons/ubuntu-mono-dark/
-%doc AUTHORS COPYING README.md
+%doc AUTHORS COPYING README.md CHANGELOG.md
 
 %changelog
