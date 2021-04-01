@@ -40,6 +40,7 @@ Requires: gtk3
 BuildArchitectures: noarch
 BuildRequires: desktop-file-utils
 BuildRequires: hicolor-icon-theme
+Requires: desktop-file-utils
 Requires: typelib-1_0-Gtk-3_0
 Requires: dbus-1-x11
 %endif
