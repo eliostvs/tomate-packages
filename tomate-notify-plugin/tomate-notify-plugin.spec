@@ -30,6 +30,8 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-build
 BuildRequires: python3-devel
 BuildRequires: python3-setuptools
 
+Requires: notification-daemon
+
 %if 0%{?suse_version}
 BuildArchitectures: noarch
 Requires: typelib-1_0-Notify-0_7
@@ -38,7 +40,6 @@ Requires: typelib-1_0-Notify-0_7
 %if 0%{?fedora}
 BuildArch: noarch
 Requires: libnotify
-Requires: notification-daemon
 %endif
 
 %description
