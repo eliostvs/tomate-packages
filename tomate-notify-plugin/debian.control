@@ -15,6 +15,6 @@ Architecture: all
 Depends: ${misc:Depends},
  ${python3:Depends},
  gir1.2-notify-0.7,
- notify-osd,
+ notification-daemon,
  tomate-gtk (>= 0.7.0)
 Description: Tomate plugin that shows screen notifications.
