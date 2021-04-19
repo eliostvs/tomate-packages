@@ -18,6 +18,6 @@ Depends: ${misc:Depends},
  dbus-x11,
  gir1.2-gdkpixbuf-2.0,
  gir1.2-gtk-3.0,
- python-tomate (>= 0.12.0)
+ python-tomate (>= 0.13.0)
 Suggests: tomate-indicator-plugin, tomate-statusicon-plugin, tomate-launcher-plugin, tomate-alarm-plugin, tomate-notify-plugin, tomate-exec-plugin
 Description: A Pomodoro timer written in Gtk3 and Python for Linux desktops.

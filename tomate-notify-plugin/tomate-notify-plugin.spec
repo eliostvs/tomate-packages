@@ -31,6 +31,7 @@ BuildRequires: python3-devel
 BuildRequires: python3-setuptools
 
 Requires: notification-daemon
+Requires: tomate-gtk >= 0.12.0
 
 %if 0%{?suse_version}
 BuildArchitectures: noarch

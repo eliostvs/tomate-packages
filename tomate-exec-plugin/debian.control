@@ -14,5 +14,5 @@ Package: tomate-exec-plugin
 Architecture: all
 Depends: ${misc:Depends},
  ${python3:Depends},
- tomate-gtk (>= 0.7.0)
+ tomate-gtk (>= 0.12.0)
 Description: Tomate plugin that run commands when the timer starts, stops or finishes.
