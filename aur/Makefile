@@ -12,7 +12,7 @@ SHELL         = bash
 
 DOCKER_IMAGE  = eliostvs/aur
 DOCKER_HOME   = /home/pkg/code
-release       = 1
+release       ?= 1
 
 .PHONY: clone
 clone:
@@ -24,9 +24,10 @@ docker:
 	docker rmi $(DOCKER_IMAGE) 2> /dev/null || true
 	docker build --build-arg UID=$(shell id -u) --build-arg GID=$(shell id -g) -t $(DOCKER_IMAGE) .
 
-.PHONY: env
-env:
-	docker run --rm -it -v $(CURDIR):$(DOCKER_HOME) --workdir $(DOCKER_HOME) $(DOCKER_IMAGE) bash
+.PHONY: run
+run:
+	# in the host run the command `xhost +` then in the container open an app with the command `DISPLAY=:0 app`
+	docker run --network=host --rm -it -v $(CURDIR):$(DOCKER_HOME) --workdir $(DOCKER_HOME) $(DOCKER_IMAGE) bash
 
 .PHONY: update
 update:
