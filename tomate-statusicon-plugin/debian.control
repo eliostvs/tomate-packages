@@ -3,9 +3,9 @@ Section: python
 Priority: optional
 Build-Depends: debhelper (>= 9),
  dh-python,
+ gtk-update-icon-cache,
  python3-all,
- python3-setuptools,
- gtk-update-icon-cache
+ python3-setuptools
 Maintainer: Elio Esteves Duarte <elio.esteves.duarte@gmail.com>
 Standards-Version: 3.9.5
 X-Python3-Version: >= 3.2
