@@ -4,7 +4,6 @@ Priority: optional
 Build-Depends: debhelper (>= 9),
  desktop-file-utils,
  dh-python,
- gtk-update-icon-cache,
  python3-all,
  python3-setuptools
 Maintainer: Elio Esteves Duarte <elio.esteves.duarte@gmail.com>
