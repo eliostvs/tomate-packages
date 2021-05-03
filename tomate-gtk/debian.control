@@ -2,7 +2,6 @@ Source: tomate-gtk
 Section: python
 Priority: optional
 Build-Depends: debhelper (>= 9),
- desktop-file-utils,
  dh-python,
  python3-all,
  python3-setuptools
@@ -16,9 +15,19 @@ Architecture: all
 Depends: ${misc:Depends},
  ${python3:Depends},
  dbus-x11,
+ desktop-file-utils,
  gir1.2-gdkpixbuf-2.0,
  gir1.2-gtk-3.0,
  gnome-icon-theme,
- python-tomate (>= 0.13.0)
+ python-tomate (>= 0.13.0),
+ python3-blinker,
+ python3-dbus,
+ python3-gi,
+ python3-six,
+ python3-venusian,
+ python3-wiring,
+ python3-wrapt,
+ python3-xdg,
+ python3-yapsy
 Suggests: tomate-indicator-plugin, tomate-statusicon-plugin, tomate-launcher-plugin, tomate-alarm-plugin, tomate-notify-plugin, tomate-exec-plugin
 Description: A Pomodoro timer written in Gtk3 and Python for Linux desktops.

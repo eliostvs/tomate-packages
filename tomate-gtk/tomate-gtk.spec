@@ -30,6 +30,14 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-build
 BuildRequires: python3-devel
 BuildRequires: python3-setuptools
 
+Requires: python3-blinker
+Requires: python3-gobject
+Requires: python3-pyxdg
+Requires: python3-six
+Requires: python3-venusian
+Requires: python3-wiring
+Requires: python3-wrapt
+Requires: python3-yapsy
 Requires: python3-tomate >= 0.13.0
 
 %if 0%{?fedora}
