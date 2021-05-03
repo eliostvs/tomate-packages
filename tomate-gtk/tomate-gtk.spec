@@ -34,6 +34,7 @@ Requires: python-tomate >= 0.13.0
 Requires: python3-blinker
 Requires: python3-gobject
 Requires: python3-pyxdg
+Requires: python3-setuptools
 Requires: python3-six
 Requires: python3-venusian
 Requires: python3-wiring
@@ -52,7 +53,7 @@ BuildRequires: desktop-file-utils
 BuildRequires: hicolor-icon-theme
 Requires: desktop-file-utils
 Requires: typelib-1_0-Gtk-3_0
-Requires: dbus-1-x11
+Requires: python3-dbus-python
 %endif
 
 %description
