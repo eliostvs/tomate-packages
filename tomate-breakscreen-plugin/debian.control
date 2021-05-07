@@ -14,5 +14,5 @@ Package: tomate-breakscreen-plugin
 Architecture: all
 Depends: ${misc:Depends},
  ${python3:Depends},
- tomate-gtk (>= 0.12.0)
+ tomate-gtk (>= 0.13.0)
 Description: Tomate plugin that shows a full screen window which prevents users from using the computer during a break.
