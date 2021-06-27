@@ -12,6 +12,7 @@ SHELL         = bash
 
 DOCKER_IMAGE  = eliostvs/aur
 DOCKER_HOME   = /home/pkg/code
+DOCKER_MARKER = .docker_marker
 release       ?= 1
 
 .PHONY: clone
@@ -19,18 +20,25 @@ clone:
 	rm -rf $(name)
 	git clone ssh://aur@aur.archlinux.org/$(name).git
 
+$(DOCKER_MARKER):
+
+.PHONY: clean
+clean:
+	rm $(DOCKER_MARKER)
+
 .PHONY: docker
-docker:
+docker: $(DOCKER_MARKER)
 	docker rmi $(DOCKER_IMAGE) 2> /dev/null || true
 	docker build --build-arg UID=$(shell id -u) --build-arg GID=$(shell id -g) -t $(DOCKER_IMAGE) .
+	touch $(DOCKER_MARKER)
 
 .PHONY: run
-run:
+run: docker
 	# in the host run the command `xhost +` then in the container open an app with the command `DISPLAY=:0 app`
 	docker run --network=host --rm -it -v $(CURDIR):$(DOCKER_HOME) --workdir $(DOCKER_HOME) $(DOCKER_IMAGE) bash
 
 .PHONY: update
-update:
+update: docker
 	docker run --rm -v $(CURDIR):$(DOCKER_HOME) --workdir $(DOCKER_HOME) -e name=$(name) -e version=$(version) -e release=$(release) $(DOCKER_IMAGE) make pkg
 
 .PHONY: pkg
