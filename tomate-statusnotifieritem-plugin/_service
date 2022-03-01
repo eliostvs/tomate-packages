@@ -1,0 +1,61 @@
+<services>
+    <service name="tar_scm">
+        <param name="url">https://github.com/eliostvs/tomate-statusnotifieritem-plugin.git</param>
+        <param name="versionformat">@PARENT_TAG@</param>
+        <param name="scm">git</param>
+        <param name="exclude">.git</param>
+        <param name="exclude">.gitignore</param>
+        <param name="revision">master</param>
+        <param name="submodules">disable</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*.tar</param>
+        <param name="files">*/setup.py</param>
+    </service>
+    <service name="recompress">
+        <param name="file">*.tar</param>
+        <param name="compression">gz</param>
+    </service>
+    <service name="download_url">
+      <param name="protocol">https</param>
+      <param name="host">raw.githubusercontent.com</param>
+      <param name="path">eliostvs/tomate-packages/master/tomate-statusnotifieritem-plugin/debian.changelog</param>
+    </service>
+    <service name="download_url">
+      <param name="protocol">https</param>
+      <param name="host">raw.githubusercontent.com</param>
+      <param name="path">eliostvs/tomate-packages/master/tomate-statusnotifieritem-plugin/debian.control</param>
+    </service>
+    <service name="download_url">
+      <param name="protocol">https</param>
+      <param name="host">raw.githubusercontent.com</param>
+      <param name="path">eliostvs/tomate-packages/master/tomate-statusnotifieritem-plugin/debian.rules</param>
+    </service>
+    <service name="download_url">
+      <param name="protocol">https</param>
+      <param name="host">raw.githubusercontent.com</param>
+      <param name="path">eliostvs/tomate-packages/master/tomate-statusnotifieritem-plugin/tomate-statusnotifieritem-plugin.dsc</param>
+    </service>
+    <service name="download_url">
+      <param name="protocol">https</param>
+      <param name="host">raw.githubusercontent.com</param>
+      <param name="path">eliostvs/tomate-packages/master/tomate-statusnotifieritem-plugin/tomate-statusnotifieritem-plugin.spec</param>
+    </service>
+    <service name="download_url">
+      <param name="protocol">https</param>
+      <param name="host">raw.githubusercontent.com</param>
+      <param name="path">eliostvs/tomate-packages/master/tomate-statusnotifieritem-plugin/debian.compat</param>
+    </service>
+    <service name="download_url">
+      <param name="protocol">https</param>
+      <param name="host">raw.githubusercontent.com</param>
+      <param name="path">eliostvs/tomate-packages/master/tomate-statusnotifieritem-plugin/debian.tomate-statusnotifieritem-plugin.postinst</param>
+    </service>
+    <service name="download_url">
+      <param name="protocol">https</param>
+      <param name="host">raw.githubusercontent.com</param>
+      <param name="path">eliostvs/tomate-packages/master/tomate-statusnotifieritem-plugin/debian.tomate-statusnotifieritem-plugin.postrm</param>
+    </service>
+    <service name="set_version">
+    </service>
+</services>
