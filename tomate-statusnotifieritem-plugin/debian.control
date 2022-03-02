@@ -16,5 +16,5 @@ Architecture: all
 Depends: ${misc:Depends},
  ${python3:Depends},
  tomate-gtk (>= 0.12.0)
-Conflicts: tomate-indicator-plugin
+Conflicts: tomate-indicator-plugin tomate-statusicon-plugin
 Description: Tomate plugin that shows the session progress in the tray area

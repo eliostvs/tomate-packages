@@ -17,4 +17,5 @@ Depends: ${misc:Depends},
  ${python3:Depends},
  gir1.2-appindicator3-0.1,
  tomate-gtk (>= 0.12.0)
+Conflicts: tomate-statusicon-plugin tomate-statusnotifier-plugin
 Description: Tomate plugin that shows the session progress in the indicator.
