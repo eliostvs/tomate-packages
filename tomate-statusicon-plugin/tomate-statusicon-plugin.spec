@@ -42,6 +42,7 @@ BuildRequires: hicolor-icon-theme
 %endif
 
 Conflicts: tomate-indicator-plugin
+Conflicts: tomate-statusnotifieritem-plugin
 
 %description
 Tomate plugin that shows the session progress in the notification area.
