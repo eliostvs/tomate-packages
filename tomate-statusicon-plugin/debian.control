@@ -16,5 +16,6 @@ Architecture: all
 Depends: ${misc:Depends},
  ${python3:Depends},
  tomate-gtk (>= 0.12.0)
-Conflicts: tomate-indicator-plugin tomate-statusnotifier-plugin
+Conflicts: tomate-indicator-plugin,
+ tomate-statusnotifieritem-plugin
 Description: Tomate plugin that shows the session progress in the notification area
