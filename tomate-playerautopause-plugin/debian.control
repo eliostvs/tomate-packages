@@ -1,0 +1,19 @@
+Source: tomate-playerautopause-plugin
+Section: python
+Priority: optional
+Build-Depends: debhelper (>= 9),
+ dh-python,
+ python3-all,
+ python3-setuptools
+Maintainer: Elio Esteves Duarte <elio.esteves.duarte@gmail.com>
+Standards-Version: 3.9.5
+X-Python3-Version: >= 3.2
+Homepage: https://github.com/eliostvs/tomate-playerautopause-plugin
+
+Package: tomate-playerautopause-plugin
+Architecture: all
+Depends: ${misc:Depends},
+ ${python3:Depends},
+ tomate-gtk (>= 0.15.0),
+ gir1.2-playerctl-2.0
+Description: Pauses all running media players when the session ends
