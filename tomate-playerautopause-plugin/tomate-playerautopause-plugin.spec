@@ -1,4 +1,4 @@
-#
+e
 # spec file for package tomate-playerautopause-plugin
 #
 # Copyright (c) 2021 Elio Esteves Duarte <elio.esteves.duarte@gmail.com>
@@ -17,7 +17,7 @@
 
 %define modname tomate
 
-Name: %{modname}-breakscreen-plugin
+Name: %{modname}-playerautopause-plugin
 Version: 0.0.0
 Release: 0
 License: GPL-3.0+
