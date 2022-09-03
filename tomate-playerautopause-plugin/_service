@@ -1,4 +1,4 @@
-<sgir1.2-playerctl-2.0ervices>
+<services>
     <service name="tar_scm">
         <param name="url">https://github.com/eliostvs/tomate-playerautopause-plugin.git</param>
         <param name="versionformat">@PARENT_TAG@</param>
