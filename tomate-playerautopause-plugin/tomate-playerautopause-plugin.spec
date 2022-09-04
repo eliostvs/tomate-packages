@@ -1,4 +1,3 @@
-e
 # spec file for package tomate-playerautopause-plugin
 #
 # Copyright (c) 2021 Elio Esteves Duarte <elio.esteves.duarte@gmail.com>
