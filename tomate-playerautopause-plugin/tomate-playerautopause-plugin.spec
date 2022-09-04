@@ -21,7 +21,7 @@ Name: %{modname}-playerautopause-plugin
 Version: 0.0.0
 Release: 0
 License: GPL-3.0+
-Summary: Tomate break screen plugin
+Summary: Tomate player auto-pause plugin
 Source: %{name}-%{version}.tar.gz
 Url: https://github.com/eliostvs/tomate-playerautopause-plugin
 
@@ -31,6 +31,7 @@ BuildRequires: python3-devel
 BuildRequires: python3-setuptools
 
 Requires: tomate-gtk >= 0.15.0
+Requires: playerctl-libs
 
 %if 0%{?suse_version}
 BuildArchitectures: noarch
