@@ -44,6 +44,9 @@ Requires: python3-yapsy
 BuildArch: noarch
 Requires: gtk3
 Requires: python3-dbus
+Requires: gstreamer1-plugins-base
+Requires: gstreamer1-plugins-good
+Requires: python3-gstreamer1
 %endif
 
 %if 0%{?suse_version}
@@ -53,6 +56,9 @@ BuildRequires: hicolor-icon-theme
 Requires: python3-dbus-python
 Requires: python3-setuptools
 Requires: typelib-1_0-Gtk-3_0
+Requires: gstreamer-plugins-base
+Requires: gstreamer-plugins-good
+Requires: typelib-1_0-Gst-1_0
 %endif
 
 %description
