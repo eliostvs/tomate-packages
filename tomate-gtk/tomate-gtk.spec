@@ -94,17 +94,14 @@ if [ $1 -eq 0 ] ; then
 fi
 %endif
 
-%dir %{_datadir}/%{modname}
-%dir %{_datadir}/%{modname}/media
-%dir %{_datadir}/%{modname}/plugins
-
 %files
 %defattr(-,root,root,-)
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/*/*.*
-%{_datadir}/%{modname}/plugins/*.*
-%{_datadir}/%{modname}/media/*.*
+%dir %{_datadir}/%{modname}
+%{_datadir}/%{modname}/media/
+%{_datadir}/%{modname}/plugins/
 %{python3_sitelib}/*.egg-info
 %{python3_sitelib}/%{modname}
 
