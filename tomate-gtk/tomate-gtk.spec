@@ -94,6 +94,10 @@ if [ $1 -eq 0 ] ; then
 fi
 %endif
 
+%dir %{_datadir}/%{modname}
+%dir %{_datadir}/%{modname}/media
+%dir %{_datadir}/%{modname}/plugins
+
 %files
 %defattr(-,root,root,-)
 %{_bindir}/%{name}
