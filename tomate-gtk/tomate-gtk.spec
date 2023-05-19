@@ -99,8 +99,8 @@ fi
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/*/*.*
-/usr/share/${modname}/plugins/*.*
-/usr/share/${modname}/media/*.*
+%{_datadir}/${modname}/plugins/*.*
+%{_datadir}/${modname}/media/*.*
 %{python3_sitelib}/*.egg-info
 %{python3_sitelib}/%{modname}
 
