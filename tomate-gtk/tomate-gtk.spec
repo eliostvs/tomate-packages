@@ -61,6 +61,8 @@ Requires: gstreamer-plugins-good
 Requires: typelib-1_0-Gst-1_0
 %endif
 
+Conflicts: tomate-alarm-plugin
+
 %description
 A Pomodoro timer written in Gtk3 and Python for Linux desktops.
 
