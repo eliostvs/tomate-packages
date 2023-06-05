@@ -30,6 +30,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-build
 BuildRequires: python3-devel
 BuildRequires: python3-setuptools
 
+Requires: notification-daemon
 Requires: python-tomate >= 0.13.0
 Requires: python3-blinker
 Requires: python3-gobject
@@ -42,10 +43,11 @@ Requires: python3-yapsy
 
 %if 0%{?fedora}
 BuildArch: noarch
-Requires: gtk3
-Requires: python3-dbus
 Requires: gstreamer1-plugins-base
 Requires: gstreamer1-plugins-good
+Requires: gtk3
+Requires: libnotify
+Requires: python3-dbus
 Requires: python3-gstreamer1
 %endif
 
@@ -53,15 +55,17 @@ Requires: python3-gstreamer1
 BuildArchitectures: noarch
 BuildRequires: desktop-file-utils
 BuildRequires: hicolor-icon-theme
-Requires: python3-dbus-python
-Requires: python3-setuptools
-Requires: typelib-1_0-Gtk-3_0
 Requires: gstreamer-plugins-base
 Requires: gstreamer-plugins-good
+Requires: python3-dbus-python
+Requires: python3-setuptools
 Requires: typelib-1_0-Gst-1_0
+Requires: typelib-1_0-Gtk-3_0
+Requires: typelib-1_0-Notify-0_7
 %endif
 
 Conflicts: tomate-alarm-plugin
+Conflicts: tomate-notify-plugin
 
 %description
 A Pomodoro timer written in Gtk3 and Python for Linux desktops.
