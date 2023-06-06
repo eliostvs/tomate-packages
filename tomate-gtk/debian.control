@@ -30,6 +30,6 @@ Depends: ${misc:Depends},
  python3-wrapt,
  python3-xdg,
  python3-yapsy
-Conflicts: tomate-alarm-plugin, tomate-notify-plugin
-Suggests: tomate-indicator-plugin, tomate-statusicon-plugin, tomate-launcher-plugin, tomate-exec-plugin 
+Conflicts: tomate-alarm-plugin, tomate-notify-plugin, tomate-exec-plugin, tomate-breakscreen-plugin
+Suggests: tomate-indicator-plugin, tomate-statusicon-plugin, tomate-launcher-plugin
 Description: A Pomodoro timer written in Gtk3 and Python for Linux desktops.

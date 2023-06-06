@@ -66,6 +66,8 @@ Requires: typelib-1_0-Notify-0_7
 
 Conflicts: tomate-alarm-plugin
 Conflicts: tomate-notify-plugin
+Conflicts: tomate-exec-plugin
+Conflicts: tomate-breakscreen-plugin
 
 %description
 A Pomodoro timer written in Gtk3 and Python for Linux desktops.
