@@ -18,6 +18,7 @@ Depends: ${misc:Depends},
  gir1.2-gstreamer-1.0,
  gir1.2-gtk-3.0,
  gir1.2-notify-0.7,
+ gir1.2-playerctl-2.0
  gstreamer1.0-plugins-base,
  gstreamer1.0-plugins-good,
  notification-daemon,
@@ -30,6 +31,6 @@ Depends: ${misc:Depends},
  python3-wrapt,
  python3-xdg,
  python3-yapsy
-Conflicts: tomate-alarm-plugin, tomate-notify-plugin, tomate-exec-plugin, tomate-breakscreen-plugin
-Suggests: tomate-indicator-plugin, tomate-statusicon-plugin, tomate-launcher-plugin
+Conflicts: tomate-alarm-plugin, tomate-notify-plugin, tomate-exec-plugin, tomate-breakscreen-plugin, tomate-playerautopause-plugin
+Suggests: tomate-indicator-plugin, tomate-statusicon-plugin, tomate-launcher-plugin, tomate-statusnotifieritem-plugin
 Description: A Pomodoro timer written in Gtk3 and Python for Linux desktops.

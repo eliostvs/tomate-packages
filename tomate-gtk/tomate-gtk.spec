@@ -40,6 +40,7 @@ Requires: python3-venusian
 Requires: python3-wiring
 Requires: python3-wrapt
 Requires: python3-yapsy
+Requires: playerctl-libs
 
 %if 0%{?fedora}
 BuildArch: noarch
@@ -68,6 +69,7 @@ Conflicts: tomate-alarm-plugin
 Conflicts: tomate-notify-plugin
 Conflicts: tomate-exec-plugin
 Conflicts: tomate-breakscreen-plugin
+Conflicts: tomate-playerautopause-plugin
 
 %description
 A Pomodoro timer written in Gtk3 and Python for Linux desktops.
