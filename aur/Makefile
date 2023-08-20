@@ -30,9 +30,9 @@ help:
 .PHONY: help
 
 
-${DOCKER_MARKER}: clean docker
-	# docker build --build-arg UID=$(shell id -u) --build-arg GID=$(shell id -g) -t ${DOCKER_IMAGE} .
-	# touch ${DOCKER_MARKER}
+${DOCKER_MARKER}:
+	docker build --build-arg UID=$(shell id -u) --build-arg GID=$(shell id -g) -t ${DOCKER_IMAGE} .
+	touch ${DOCKER_MARKER}
 
 ## clean: delete environment
 clean:
@@ -40,9 +40,7 @@ clean:
 .PHONY: clean
 
 ## docker: build the docker image
-docker:
-	docker build --build-arg UID=$(shell id -u) --build-arg GID=$(shell id -g) -t ${DOCKER_IMAGE} .
-	touch ${DOCKER_MARKER}
+docker: ${DOCKER_MARKER}
 .PHONY: docker
 
 ## arch: start archlinux docker image
