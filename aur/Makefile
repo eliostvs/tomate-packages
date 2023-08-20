@@ -15,7 +15,7 @@ DOCKER_IMAGE  = eliostvs/aur
 DOCKER_HOME   = /home/pkg/code
 DOCKER_MARKER = .dockermarker
 release       ?= 1
-pkg           ?= ""
+name          ?= ""
 
 guard-%:
 	if [ "${${*}}" = "" ]; then \
@@ -50,15 +50,15 @@ arch: ${DOCKER_MARKER}
 	docker run --network=host --rm -it -v $(CURDIR):$(DOCKER_HOME) --workdir $(DOCKER_HOME) $(DOCKER_IMAGE) bash
 .PHONY: arch
 
-## delete <pkg>: delete package from disk
-delete: guard-pkg
+## delete <name>: delete package from disk
+delete: guard-name
 	rm -rf ${name} 2> /dev/null || true
 .PHONY: delete
 
-## clone <pkg>: clone pacakge metadata from aur registry
-clone: guard-pkg
+## clone <name>: clone pacakge metadata from aur registry
+clone: guard-name
 	rm -rf ${name}
-	git clone ssh://aur@aur.archlinux.org/$(name).git
+	git clone "ssh://aur@aur.archlinux.org/${name}.git"
 .PHONY: clone
 
 ## package <name> <version> <release>: update package metadata version/release
@@ -72,16 +72,16 @@ package: guard-name guard-version guard-release
 	popd
 .PHONY: package
 
-## release <pkg> <version> <release>: save package metadata and push changes to aur registry
-release: guard-pkg guard-version guard-release
+## release <name> <version> <release>: save package metadata and push changes to aur registry
+release: guard-name guard-version guard-release
 	pushd ${name}
 	git commit -am "Update version to ${version}-${release}"
 	git push -u origin master
 	popd
 .PHONY: release
 
-## updatesums <pkg> <version> <release>: update package metadata using docker
-updatesums: ${DOCKER_MARKER} guard-pkg guard-version guard-release
+## updatesums <name> <version> <release>: update package metadata using docker
+updatesums: ${DOCKER_MARKER} guard-name guard-version guard-release
 	docker run --rm -v ${CURDIR}:${DOCKER_HOME} --workdir ${DOCKER_HOME} -e name=${name} -e version=${version} -e release=${release} ${DOCKER_IMAGE} make package
 .PHONY: updatesums
 
