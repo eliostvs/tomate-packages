@@ -15,7 +15,7 @@ DOCKER_IMAGE  = eliostvs/aur
 DOCKER_HOME   = /home/pkg/code
 DOCKER_MARKER = .dockermarker
 release       ?= 1
-name          ?= ""
+pkg           ?= ""
 
 guard-%:
 	if [ "${${*}}" = "" ]; then \
@@ -30,33 +30,33 @@ help:
 .PHONY: help
 
 
-${DOCKER_MARKER}: docker-clean docker-build
+${DOCKER_MARKER}: clean docker
 	# docker build --build-arg UID=$(shell id -u) --build-arg GID=$(shell id -g) -t ${DOCKER_IMAGE} .
 	# touch ${DOCKER_MARKER}
 
 ## clean: delete environment
 clean:
 	rm ${DOCKER_MARKER} 2> /dev/null || true
-.PHONY: docker-clean
+.PHONY: clean
 
 ## docker: build the docker image
 docker:
 	docker build --build-arg UID=$(shell id -u) --build-arg GID=$(shell id -g) -t ${DOCKER_IMAGE} .
 	touch ${DOCKER_MARKER}
-.PHONY: docker-build
+.PHONY: docker
 
-## archlinux: start archlinux docker image
-archlinux: ${DOCKER_MARKER}
+## arch: start archlinux docker image
+arch: ${DOCKER_MARKER}
 	docker run --network=host --rm -it -v $(CURDIR):$(DOCKER_HOME) --workdir $(DOCKER_HOME) $(DOCKER_IMAGE) bash
-.PHONY: docker-enter
+.PHONY: arch
 
-## delete <name>: delete package from disk
-delete: guard-name
+## delete <pkg>: delete package from disk
+delete: guard-pkg
 	rm -rf ${name} 2> /dev/null || true
 .PHONY: delete
 
-## clone <name>: clone pacakge metadata from aur registry
-clone: guard-name
+## clone <pkg>: clone pacakge metadata from aur registry
+clone: guard-pkg
 	rm -rf ${name}
 	git clone ssh://aur@aur.archlinux.org/$(name).git
 .PHONY: clone
@@ -70,18 +70,18 @@ package: guard-name guard-version guard-release
 	updpkgsums
 	makepkg --printsrcinfo > .SRCINFO
 	popd
-.PHONY: pkg
+.PHONY: package
 
-## release <name> <version> <release>: save package metadata and push changes to aur registry
-release: guard-name guard-version guard-release
+## release <pkg> <version> <release>: save package metadata and push changes to aur registry
+release: guard-pkg guard-version guard-release
 	pushd ${name}
 	git commit -am "Update version to ${version}-${release}"
 	git push -u origin master
 	popd
-.PHONY: commit
+.PHONY: release
 
-## update <name> <version> <release>: update package metadata using docker
-update: ${DOCKER_MARKER} guard-name guard-version guard-release
+## updatesums <pkg> <version> <release>: update package metadata using docker
+updatesums: ${DOCKER_MARKER} guard-pkg guard-version guard-release
 	docker run --rm -v ${CURDIR}:${DOCKER_HOME} --workdir ${DOCKER_HOME} -e name=${name} -e version=${version} -e release=${release} ${DOCKER_IMAGE} make package
-.PHONY: update
+.PHONY: updatesums
 
