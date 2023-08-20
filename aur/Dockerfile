@@ -1,12 +1,13 @@
 FROM archlinux
 
-ENV HOME=/home/pkg
-ARG UID=1000
-ARG GID=1000
+ARG HOME=/home/pkg
+ARG USER=pkg
+ARG UID=999
+ARG GID=999
 
-RUN groupadd -g $GID pkg && useradd -u $UID -r -g $GID -G wheel -m pkg
+RUN groupadd -g ${GID} pkg && useradd -u ${UID} -r -g ${GID} -G wheel -m ${USER}
 
-RUN echo '%wheel ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+RUN echo "${USER} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 RUN echo $'\n\
 [archlinuxfr]\n\
@@ -16,6 +17,6 @@ Server = http://repo.archlinux.fr/$arch\n\
 
 RUN pacman -Sy --noconfirm binutils fakeroot make pacman-contrib sudo wget git
 
-USER $UID:$GID
+USER ${UID}:${GID}
 
-WORKDIR $HOME
+WORKDIR ${HOME}
