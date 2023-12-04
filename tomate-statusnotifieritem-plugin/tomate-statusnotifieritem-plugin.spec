@@ -86,7 +86,7 @@ fi
 %{_datadir}/%{modname}/plugins/
 %{_datadir}/icons/hicolor/*/*/*.*
 %{_datadir}/icons/Adwaita/*/*/*.*
-%if 0%{?suse_version} == 1310
+%if 0%{?suse_version}
 %dir %{_datadir}/icons/Adwaita/
 %dir %{_datadir}/icons/Adwaita/22x22/
 %dir %{_datadir}/icons/Adwaita/22x22/status
