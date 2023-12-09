@@ -31,7 +31,6 @@ BuildRequires: python3-devel
 BuildRequires: python3-setuptools
 
 Requires: notification-daemon
-Requires: python-tomate >= 0.13.0
 Requires: python3-blinker
 Requires: python3-gobject
 Requires: python3-pyxdg
