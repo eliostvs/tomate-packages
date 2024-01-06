@@ -37,7 +37,6 @@ BuildArch: noarch
 
 %if 0%{?suse_version}
 BuildArchitectures: noarch
-BuildRequires: adwaita-icon-theme
 BuildRequires: hicolor-icon-theme
 %endif
 
@@ -63,7 +62,6 @@ Tomate plugin that shows the session progress in the tray area.
 
 %if 0%{?fedora}
 /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null || :
-/bin/touch --no-create %{_datadir}/icons/Adwaita &>/dev/null || :
 %endif
 
 %postun
@@ -75,7 +73,6 @@ Tomate plugin that shows the session progress in the tray area.
 if [ $1 -eq 0 ] ; then
     /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null
     /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
-    /usr/bin/gtk-update-icon-cache %{_datadir}/icons/Adwaita &>/dev/null || :
 fi
 %endif
 
@@ -85,12 +82,6 @@ fi
 %dir %{_datadir}/%{modname}/
 %{_datadir}/%{modname}/plugins/
 %{_datadir}/icons/hicolor/*/*/*.*
-%{_datadir}/icons/Adwaita/*/*/*.*
-%if 0%{?suse_version}
-%dir %{_datadir}/icons/Adwaita/
-%dir %{_datadir}/icons/Adwaita/22x22/
-%dir %{_datadir}/icons/Adwaita/22x22/status
-%endif
 %doc AUTHORS LICENSE README.md CHANGELOG.md
 
 %changelog
