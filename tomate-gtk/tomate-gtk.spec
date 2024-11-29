@@ -49,6 +49,7 @@ Requires: gtk3
 Requires: libnotify
 Requires: python3-dbus
 Requires: python3-gstreamer1
+Requires: python3-packaging
 %endif
 
 %if 0%{?suse_version}
@@ -58,7 +59,7 @@ BuildRequires: hicolor-icon-theme
 Requires: gstreamer-plugins-base
 Requires: gstreamer-plugins-good
 Requires: python3-dbus-python
-Requires: python3-setuptools
+Requires: python311-packaging
 Requires: typelib-1_0-Gst-1_0
 Requires: typelib-1_0-Gtk-3_0
 Requires: typelib-1_0-Notify-0_7
