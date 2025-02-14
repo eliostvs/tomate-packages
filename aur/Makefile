@@ -59,7 +59,7 @@ clone: guard-name
 	git clone "ssh://aur@aur.archlinux.org/${name}.git"
 .PHONY: clone
 
-## package <name> <version> <release>: update package metadata version/release
+## package <name> <version> [release]: update package metadata version/release
 package: guard-name guard-version guard-release
 	pushd ${name}
 	echo "Update package ${name} to version ${version}-${release}"
@@ -70,7 +70,7 @@ package: guard-name guard-version guard-release
 	popd
 .PHONY: package
 
-## release <name> <version> <release>: save package metadata and push changes to aur registry
+## release <name> <version> [release]: save package metadata and push changes to aur registry
 release: guard-name guard-version guard-release
 	pushd ${name}
 	git commit -am "Update version to ${version}-${release}"
