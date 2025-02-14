@@ -79,7 +79,7 @@ release: guard-name guard-version guard-release
 .PHONY: release
 
 ## updatesums <name> <version> [release]: update package metadata using docker
-updatesums: ${DOCKER_MARKER} guard-name guard-version guard-release
+updatesums: guard-name guard-version guard-release ${DOCKER_MARKER} 
 	docker run --rm -v ${CURDIR}:${DOCKER_HOME} --workdir ${DOCKER_HOME} -e name=${name} -e version=${version} -e release=${release} ${DOCKER_IMAGE} make package
 .PHONY: updatesums
 
