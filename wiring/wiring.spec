@@ -1,6 +1,4 @@
 #
-# spec file for package tomate-gtk
-#
 # Copyright (c) 2014 Elio Esteves Duarte <elio.esteves.duarte@gmail.com>
 #
 # All modifications and additions to the file contributed by third parties
@@ -13,7 +11,6 @@
 # published by the Open Source Initiative.
 
 # Please submit bugfixes or comments via http://bugs.opensuse.org/
-#
 
 Name: python3-wiring
 Version: 0.0.0
