@@ -1,0 +1,19 @@
+Source: python3-wiring
+Section: python
+Priority: optional
+Build-Depends: debhelper (>= 9),
+ dh-python,
+ python3-all,
+ python3-setuptools
+Maintainer: Elio Esteves Duarte <elio.esteves.duarte@gmail.com>
+Standards-Version: 3.9.5
+X-Python3-Version: >= 3.2
+Homepage: https://github.com/eliostvs/wiring
+
+Package: python3-wiring
+Architecture: all
+Depends: ${misc:Depends},
+ ${python3:Depends},
+ python3-six,
+ python3-venusian
+Description: Architectural foundation for Python applications.
