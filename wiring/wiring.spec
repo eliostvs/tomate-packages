@@ -15,13 +15,11 @@
 # Please submit bugfixes or comments via http://bugs.opensuse.org/
 #
 
-%define modname tomate
-
-Name: %{modname}-gtk
+Name: python3-wiring
 Version: 0.0.0
 Release: 0
 License: GPL-3.0+
-Summary: A Pomodoro timer
+Summary: Architectural foundation for Python applications.
 Source: %{name}-%{version}.tar.gz
 Url: https://github.com/eliostvs/wiring
 
