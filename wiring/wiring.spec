@@ -23,7 +23,7 @@ Release: 0
 License: GPL-3.0+
 Summary: A Pomodoro timer
 Source: %{name}-%{version}.tar.gz
-Url: Architectural foundation for Python applications
+Url: https://github.com/eliostvs/wiring
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
