@@ -31,7 +31,7 @@ Requires: python3-venusian
 Architectural foundation for Python applications.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n wiring-%{version}
 
 %build
 python3 setup.py build
