@@ -22,7 +22,7 @@ Summary: Architectural foundation for Python applications.
 Source: %{modname}-%{version}.tar.gz
 Url: https://github.com/eliostvs/wiring
 
-BuildRoot: %{_tmppath}/%{name}-%{version}-build
+BuildRoot: %{_tmppath}/%{modname}-%{version}-build
 
 BuildRequires: python3-devel
 BuildRequires: python3-setuptools
