@@ -47,6 +47,6 @@ python3 setup.py install --prefix=%{_prefix} --root=%{buildroot}
 %{python3_sitelib}/*.egg-info
 %{python3_sitelib}/%{modname}
 
-%doc LICENSE README.rs
+%doc LICENSE README.rst
 
 %changelog
