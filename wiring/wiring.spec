@@ -12,12 +12,14 @@
 
 # Please submit bugfixes or comments via http://bugs.opensuse.org/
 
-Name: python3-wiring
+%define modname wiring
+
+Name: python3-%{modname}
 Version: 0.0.0
 Release: 0
 License: GPL-3.0+
 Summary: Architectural foundation for Python applications.
-Source: %{name}-%{version}.tar.gz
+Source: %{modname}-%{version}.tar.gz
 Url: https://github.com/eliostvs/wiring
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
@@ -31,7 +33,7 @@ Requires: python3-venusian
 Architectural foundation for Python applications.
 
 %prep
-%setup -q -n wiring-%{version}
+%setup -q -n %{modname}-%{version}
 
 %build
 python3 setup.py build
