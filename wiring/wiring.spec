@@ -32,6 +32,8 @@ Requires: python3-venusian
 %description
 Architectural foundation for Python applications.
 
+%global debug_package %{nil}
+
 %prep
 %setup -q -n %{modname}-%{version}
 
